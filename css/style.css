@@ -71,7 +71,8 @@
 	}
 
 	.carousel-caption input:focus{
-		width: 100%;
+		width: 70%;
+		text-align: center;
 	}
 
 
@@ -187,6 +188,10 @@
   margin-bottom: 5px;
 }
 
+.footer .icons a:hover{
+	background-color: grey;
+}
+
 
 /* footer center*/
 
@@ -210,13 +215,16 @@
 .footer .footer-center i.fa-envelope {
   font-size: 17px;
   line-height: 38px;
+  color: #d5d5d5;
 }
+
 
 .footer .footer-center p {
   display: inline-block;
-  color: #ffffff;
+  color: #d5d5d5;
   vertical-align: middle;
   margin: 0;
+
 }
 
 .footer .footer-center p span {
@@ -236,6 +244,10 @@
 
 .footer .footer-right {
   width: 35%;
+}
+
+.footer .footer-right img{
+	height: 150px;
 }
 
 .footer h2 {
@@ -259,19 +271,21 @@
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color: inherit;
+  color: #d5d5d5;
 }
 
 .footer .menu a:hover {
-  color: #0099ff;
+  color: #fff;
 }
 
 .footer .name {
-  color: #0099ff;
+  color: #d5d5d5;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
 }
+
+
 
 @media (max-width: 767px) {
   .footer {
@@ -318,7 +332,16 @@
 	h4{
 	font-size: 0.9em;
 	}
+
+	.footer{
+		height: 850px;
+	}
 }
 
 
-	
+	@media (max-width: 1200px){
+
+		.footer{
+			height: 800px;
+		}
+	}
