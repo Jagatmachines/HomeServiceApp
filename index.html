@@ -17,6 +17,7 @@
   
 
   <style>
+  /*
   	footer{
 		width: 100%;
 		background-color: #2c2c2c;
@@ -41,6 +42,8 @@
 			padding: 10px;
 		}
 	}
+	*/
+
 </style>
 	
 </head>
@@ -54,7 +57,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>	
-				<a class="navbar-brand" href="#"><img src="img/w3newbie.png"></a>	
+				<a class="navbar-brand" href="#"><img src="img/logo.png"></a>	
 			</div>
 
 
@@ -200,9 +203,14 @@
 				<div class="carousel-caption">
 					<p class="quote">Bringing Services To Your Doorstep</p>
 					<br>
-					<a href="#all_services">
+					<form>
+					<input type="text" name="search" placeholder="Search for a service">
+					</form>
+
+					<!--<a href="#all_services">
 						<button type="button" class="btn-main btn-default">View All Services</button>
 					</a>
+					-->
 				</div>
 			</div>    <!--End Active-->
 
@@ -233,59 +241,95 @@
 	<div id="all_services">
 	<div class="container text-center">
 		<h2>Our Services</h2>
-		<div class="row">
-			<div class="col-sm-4">
+		<br>
+		<h3>Shifting Homes</h3>
+		<br><br><br>
+		<div class="row service-list">
+			<div class="col-sm-3">
 				<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/carpenter.jpg" id="icon">
-				<h4>Captenter</h4>
+				<img src="img/movers.jpg" id="icon">
+				<h4>Packers and movers</h4>
 				</a>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/electrician.jpg" id="icon">
-				<h4>Electrician</h4>
+				<img src="img/house_cleaner.jpg" id="icon">
+				<h4>House Cleaning</h4>
 			</a>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
-				<img src="img/painter.jpg" id="icon">
-				<h4>House Painter</h4>
+				<img src="img/pest_control.jpg" id="icon">
+				<h4>Pest Control</h4>
+			</a>
+			</div>
+			<div class="col-sm-3">
+			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
+				<img src="img/ro.jpg" id="icon">
+				<h4>RO Installation and Repair</h4>
 			</a>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-sm-4">
+		<br>
+		<h3>Home Maintainance</h3>
+		<br><br><br>
+
+		<div class="row service-list">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
 				<img src="img/plumber.jpg" id="icon">
 				<h4>Plumber</h4>
 			</div>
 			</a>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/ro.jpg" id="icon">
-				<h4>RO Installation and Repair</h4>
+				<img src="img/electrician.jpg" id="icon">
+				<h4>Electrician</h4>
 			</a>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/construction_worker.jpg" id="icon">
-				<h4>Construction Workers</h4>
+				<img src="img/ac_repair.png" id="icon">
+				<h4>AC Repair</h4>
+			</a>
+			</div>
+
+			<div class="col-sm-3">
+			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
+				<img src="img/ro_repair.jpg" id="icon">
+				<h4>RO Repair</h4>
 			</a>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-sm-4">
+		<br>
+		<h3>Wedding Service</h3>
+		<br><br><br>
+
+		<div class="row service-list">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/saloon.jpg" id="icon">
-				<h4>Saloon at Home</h4>
+				<img src="img/wedding_photographer.jpg" id="icon">
+				<h4>Wedding Photographer</h4>
 			</a>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
 				<img src="img/bridal_makeup.jpg" id="icon">
 				<h4>Bridal Makeup</h4>
+			</a>
+			</div>
+			<div class="col-sm-3">
+			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
+				<img src="img/wedding_planner.jpg" id="icon">
+				<h4>Wedding Planner</h4>
+			</a>
+			</div>
+			<div class="col-sm-3">
+			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
+				<img src="img/wedding_caterers.jpg" id="icon">
+				<h4>Wedding Caterers</h4>
 			</a>
 			</div>
 		</div>
@@ -326,12 +370,15 @@
 <!--PopUp windows ends-->	
 
 	
+	<!--
 	<footer class="container-fluid text-center">
 		<div class="row">
+			
 			<div class="col-sm-4">
-				<h3>Contact Us</h3>
-				<br>
-				<h4>Our Address and Contact Info</h4>
+				About Us<br>
+				Blog<br>
+				Career<br>
+
 			</div>
 			<div class="col-sm-4">
 				<h3>Connect with Us</h3>
@@ -342,11 +389,55 @@
 				<a href="#" class="fa fa-youtube"></a>
 			</div>
 			<div class="col-sm-4">
-				<img src="img/bunny.png" class="icon">
+				<h3>Contact Us</h3>
+				<br>
+				Our Address and Contact Info
 			</div>
 		</div>		
 	</footer>
+	-->
 
+	<footer class="footer">
+  <div class="footer-left col-md-4 col-sm-6">
+    <p class="about">
+      <span> About PASALE DAI</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
+      ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
+    </p>
+    <div class="icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-google-plus"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span> Street name and number</span> City, Country</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p> (+00) 0000 000 000</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#"> office@company.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right col-md-4 col-sm-6">
+    <!--<h2> Company<span> logo</span></h2>-->
+    <img src="img/logo.png">
+    <p class="menu">
+      <a href="#"> Home</a> |
+      <a href="#"> Services</a> |
+      <a href="#"> Blog</a> |
+      <a href="#"> Career</a> |
+      <a href="#"> Contact Us</a>
+    </p>
+    <p class="name"> PASALE DAI &copy; 2017</p>
+  </div>
+</footer>
 	
 </body>
 </html>

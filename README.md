@@ -1,2 +1,1 @@
-# HomeServiceApp
-Home Service App for everybody
+# Home Services
