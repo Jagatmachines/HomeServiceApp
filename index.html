@@ -1,471 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Pasale Dai-Your Friend In Need</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pasale Dai-Your Friend In Need</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--Link Stylesheets-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="css/animate.min.css" rel="stylesheet">
+    <!--Link Stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/animate.min.css" rel="stylesheet">
 
-  <!-- Link JavaScript Files-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+    <!-- Link JavaScript Files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
-    
     <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
+    <script>
+        new WOW().init();
+    </script>
 
-  <style>
+    <style>
+        /*
+        footer{
+            width: 100%;
+            background-color: #2c2c2c;
+            padding: 5%;
+            color: #fff;
+        }
 
-  /*
-  	footer{
-		width: 100%;
-		background-color: #2c2c2c;
-		padding: 5%;
-		color: #fff;
-	}
+        .fa{
+            padding: 15px;
+            font-size: 25px;
+            color: #fff;
+        }
 
-	.fa{
-		padding: 15px;
-		font-size: 25px;
-		color: #fff;
-	}
+        .fa:hover{
+            color: #4c4c4c;
+            text-decoration: none;
+        }
 
-	.fa:hover{
-		color: #4c4c4c;
-		text-decoration: none;
-	}
+        @media (max-width: 900px){
+            .fa{
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+        */
+        /* The Close Button */
 
-	@media (max-width: 900px){
-		.fa{
-			font-size: 20px;
-			padding: 10px;
-		}
-	}
-	*/
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-/* The Close Button */
-
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-</style>
-	
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+            </div>
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>	
-				<a class="navbar-brand" href="#"><img src="img/logo.png"></a>	
-			</div>
+            <div class="collapse navbar-collapse" id="myNavBar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="padding-right: 45px;"><a href="partner.html">Join as Professional</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!--PopUp For LogIn-->
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title"><b><center>Log In</center></b></div>
+                </div>
 
+                <div class="modal-body">
+                    <div class="container login-form">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form>
+                                    <div class="input-group login-userinput">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input id="txtUser" type="text" class="form-control" name="username" placeholder="Username or PhoneNumber">
+                                    </div>
 
-			<div class="collapse navbar-collapse" id="myNavBar">
-				<ul class="nav navbar-nav navbar-right">
-					<li style="padding-right: 45px;"><a href="partner.html">Join as Professional</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
-				</ul>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+                                        <span id="showPassword" class="input-group-btn">
+                                            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                        </span>
+                                    </div>
 
-			</div>
+                                    <button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i>Login</button>
 
-		</div>	
-			
-	</nav>
+                                    <div class="checkbox login-options">
+                                        <label><input type="checkbox" />Remember Me</label>
+                                        <a href="#" class="login-forgot">Forgot Username/Password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-	<!--PopUp For LogIn-->
-	<div id="login" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<div class="modal-title"><b><center>Log In</center></b></div>
-				</div>
-
-				<div class="modal-body">
-					<div class="container login-form">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<form>
-									<div class="input-group login-userinput">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-										<input id="txtUser" type="text" class="form-control" name="username" placeholder="Username or PhoneNumber">
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
-										<span id="showPassword" class="input-group-btn">
-					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
-					          </span>  
-									</div>
-									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
-									<div class="checkbox login-options">
-										<label><input type="checkbox"/> Remember Me</label>
-										<a href="#" class="login-forgot">Forgot Username/Password?</a>
-									</div>				
-								</form>			
-							</div>
-						</div>
-					</div>	
-				</div>
-
-				<!--
-				<div class="modal-footer">
-					<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-				-->
-			</div>
-		</div>
-	</div>
-	<!-- PopUp for login End-->
-
-
-	<!--PopUp For Register-->
-	<div id="register" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<div class="modal-title"><b><center>Sign Up</center></b></div>
-				</div>
-
-				<div class="modal-body">
-					<div class="container login-form">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<form>
-									<div class="input-group login-userinput">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-										<input id="txtUser" type="text" class="form-control" name="name" placeholder="Name">
-									</div>
-
-									<div class="input-group login-userinput">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-										<input id="txtUser" type="text" class="form-control" name="mobile" placeholder="Mobile No.">
-									</div>
-
-									<div class="input-group login-userinput">
-									    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-										<input id="txtUser" type="text" class="form-control" name="email" placeholder="Email Address">
-									</div>
-									<div class="input-group login-userinput">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
-										<span id="showPassword" class="input-group-btn">
-					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
-					          </span>  
-									</div>
-
-									<div class="input-group">
-										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Re-type Password">
-										<span id="showPassword" class="input-group-btn">
-					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
-					          </span>  
-									</div>
-
-									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Sign Up</button>
-									
-								</form>			
-							</div>
-						</div>
-					</div>	
-				</div>
-
-				<!--
-				<div class="modal-footer">
-					<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-				-->
-			</div>
-		</div>
-	</div>
-	<!-- PopUp for Register End-->
-
-
-
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
-		</ol>
-
-		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<img src="img/mountains.png">
-				<div class="carousel-caption">
-					<p class="quote">Bringing Services To Your Doorstep</p>
-					<br>
-					<form>
-					<input type="text" name="search" placeholder="Search for a service">
-					</form>
-
-					<!--<a href="#all_services">
-						<button type="button" class="btn-main btn-default">View All Services</button>
-					</a>
-					-->
-				</div>
-			</div>    <!--End Active-->
-
-			<div class="item">
-				<img src="img/snow.png">
-			</div>
-
-
-			<div class="item">
-				<img src="img/red.png">
-			</div>
-		
-		</div>
-
-		<!--Left and right control buttons-->
-		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div> <!-- End Slider-->
-
-
-	<!--Our Services-->
-	<div id="all_services">
-	<div class="container text-center">
-		<h2>Our Services</h2>
-		<br>
-		<h3>Shifting Homes</h3>
-		<br><br><br>
-		<div class="row service-list">
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-				<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/movers.jpg" id="icon">
-				<h4>Packers and movers</h4>
-				</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/house_cleaner.jpg" id="icon">
-				<h4>House Cleaning</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
-				<img src="img/pest_control.jpg" id="icon">
-				<h4>Pest Control</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
-				<img src="img/ro.jpg" id="icon">
-				<h4>RO Installation and Repair</h4>
-			</a>
-			</div>
-		</div>
-
-		<br>
-		<h3>Home Maintainance</h3>
-		<br><br><br>
-
-		<div class="row service-list">
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="h0.6s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">	
-				<img src="img/plumber.jpg" id="icon">
-				<h4>Plumber</h4>
-			</div>
-			</a>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/electrician.jpg" id="icon">
-				<h4>Electrician</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/ac_repair.png" id="icon">
-				<h4>AC Repair</h4>
-			</a>
-			</div>
-
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/ro_repair.jpg" id="icon">
-				<h4>RO Repair</h4>
-			</a>
-			</div>
-		</div>
-
-		<br>
-		<h3>Wedding Service</h3>
-		<br><br><br>
-
-		<div class="row service-list">
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/wedding_photographer.jpg" id="icon">
-				<h4>Wedding Photographer</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/bridal_makeup.jpg" id="icon">
-				<h4>Bridal Makeup</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/wedding_planner.jpg" id="icon">
-				<h4>Wedding Planner</h4>
-			</a>
-			</div>
-			<div class="col-sm-3 wow zoomIn" data-wow-delay="0.6s">
-			<a href="#" data-toggle="modal" data-target="#carpenter_popup">
-				<img src="img/wedding_caterers.jpg" id="icon">
-				<h4>Wedding Caterers</h4>
-			</a>
-			</div>
-		</div>
-	</div>
-<!-- Services End-->
-
-<!--PopUp window for service description-->
-
-<div id="carpenter_popup" class="modal fade" role="dialog">
-		<div class="modal-dialog ">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<div class="modal-title"><b><center>Description</center></b></div>
-				</div>
-
-				<div class="modal-body">
-					<div class="container login-form">
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed 
-								</p>
-
-								<button class="btnrfq success" onclick="window.location.href='service_professionals.html'" data-toggle="modal" data-target="#rfq_popup">View Service Professionals</button>
-								
-							</div>
-						</div>
-					</div>	
-				</div>
-
-				<!--
-				<div class="modal-footer">
-					<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-				-->
-			</div>
-		</div>
-	</div>
-<!--PopUp windows ends-->	
-
-
-
-
-
-	
-	<!--
-	<footer class="container-fluid text-center">
-		<div class="row">
-			
-			<div class="col-sm-4">
-				About Us<br>
-				Blog<br>
-				Career<br>
-
-			</div>
-			<div class="col-sm-4">
-				<h3>Connect with Us</h3>
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-twitter"></a>
-				<a href="#" class="fa fa-google"></a>
-				<a href="#" class="fa fa-linkedin"></a>
-				<a href="#" class="fa fa-youtube"></a>
-			</div>
-			<div class="col-sm-4">
-				<h3>Contact Us</h3>
-				<br>
-				Our Address and Contact Info
-			</div>
-		</div>		
-	</footer>
-	-->
-
-	<footer class="footer">
-  <div class="footer-left col-md-4 col-sm-6">
-    <p class="about">
-      <span> About PASALE DAI</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
-      ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
-    </p>
-    <div class="icons wow bounceInRight" >
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-google-plus"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
+                <!--
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                -->
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="footer-center col-md-4 col-sm-6">
-    <div>
-      <i class="fa fa-map-marker"></i>
-      <p><span> Street name and number</span> City, Country</p>
+    <!-- PopUp for login End-->
+
+    <!--PopUp For Register-->
+    <div id="register" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title"><b><center>Sign Up</center></b></div>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container login-form">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <form>
+                                    <div class="input-group login-userinput">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input id="txtUser" type="text" class="form-control" name="name" placeholder="Name">
+                                    </div>
+
+                                    <div class="input-group login-userinput">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                                        <input id="txtUser" type="text" class="form-control" name="mobile" placeholder="Mobile No.">
+                                    </div>
+
+                                    <div class="input-group login-userinput">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                        <input id="txtUser" type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+
+                                    <div class="input-group login-userinput">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+                                        <span id="showPassword" class="input-group-btn">
+                                            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                        </span>
+                                    </div>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input id="txtPassword" type="password" class="form-control" name="password" placeholder="Re-type Password">
+                                        <span id="showPassword" class="input-group-btn">
+                                            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                        </span>
+                                    </div>
+
+                                    <button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i>Sign Up</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                -->
+            </div>
+        </div>
     </div>
-    <div>
-      <i class="fa fa-phone"></i>
-      <p> (+00) 0000 000 000</p>
+    <!-- PopUp for Register End-->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/mountains.png">
+                <div class="carousel-caption">
+                    <p class="quote">Bringing Services To Your Doorstep</p>
+                    <br>
+                    <form>
+                        <input type="text" name="search" placeholder="Search for a service">
+                    </form>
+
+                    <!--
+                    <a href="#all_services">
+                        <button type="button" class="btn-main btn-default">View All Services</button>
+                    </a>
+                    -->
+                </div>
+            </div>
+            <!--End Active-->
+
+            <div class="item">
+                <img src="img/snow.png">
+            </div>
+
+            <div class="item">
+                <img src="img/red.png">
+            </div>
+        </div>
+
+        <!--Left and right control buttons-->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div>
-      <i class="fa fa-envelope"></i>
-      <p>office@company.com</p>
+    <!-- End Slider-->
+
+    <!--Our Services-->
+    <div id="all_services">
+        <div class="container text-center">
+            <h2>Our Services</h2>
+            <br>
+
+            <h3>Shifting Homes</h3>
+            <br>
+            <br>
+            <br>
+
+            <div class="row service-list">
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/movers.jpg" id="icon">
+                        <h4>Packers and movers</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/house_cleaner.jpg" id="icon">
+                        <h4>House Cleaning</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup"> 
+                        <img src="img/pest_control.jpg" id="icon">
+                        <h4>Pest Control</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup"> 
+                        <img src="img/ro.jpg" id="icon">
+                        <h4>RO Installation and Repair</h4>
+                    </a>
+                </div>
+            </div>
+
+            <br>
+            <h3>Home Maintainance</h3>
+            <br>
+            <br>
+            <br>
+
+            <div class="row service-list">
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="h0.6s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup"> 
+                        <img src="img/plumber.jpg" id="icon">
+                        <h4>Plumber</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/electrician.jpg" id="icon">
+                        <h4>Electrician</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/ac_repair.png" id="icon">
+                        <h4>AC Repair</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.4s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/ro_repair.jpg" id="icon">
+                        <h4>RO Repair</h4>
+                    </a>
+                </div>
+            </div>
+
+            <br>
+            <h3>Wedding Service</h3>
+            <br>
+            <br>
+            <br>
+
+            <div class="row service-list">
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/wedding_photographer.jpg" id="icon">
+                        <h4>Wedding Photographer</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/bridal_makeup.jpg" id="icon">
+                        <h4>Bridal Makeup</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.2s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/wedding_planner.jpg" id="icon">
+                        <h4>Wedding Planner</h4>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 wow zoomIn" data-wow-delay="0.6s">
+                    <a href="#" data-toggle="modal" data-target="#carpenter_popup">
+                        <img src="img/wedding_caterers.jpg" id="icon">
+                        <h4>Wedding Caterers</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <div class="footer-right col-md-4 col-sm-6">
-    <img src="img/full_logo.jpg">
-    <p class="menu">
-      <a href="index.html"> Home</a> |
-      <a href="index.html#all_services"> Services</a> |
-      <a href="#"> Blog</a> |
-      <a href="#"> Career</a> 
-    </p>
-    <p class="name"> PASALE DAI &copy; 2017</p>
-  </div>
-</footer>
+    <!-- Services End-->
 
+    <!--PopUp window for service description-->
+    <div id="carpenter_popup" class="modal fade" role="dialog">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-title"><b><center>Description</center></b></div>
+                </div>
 
+                <div class="modal-body">
+                    <div class="container login-form">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed
+                                </p>
 
+                                <button class="btnrfq success" onclick="window.location.href='service_professionals.html'" data-toggle="modal" data-target="#rfq_popup">View Service Professionals</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-		
-	
+                <!--
+                <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+    <!--PopUp windows ends-->
+
+    <!--
+    <footer class="container-fluid text-center">
+        <div class="row">
+    
+            <div class="col-sm-4">
+                About Us<br>
+                Blog<br>
+                Career<br>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Connect with Us</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Contact Us</h3>
+                <br>
+                Our Address and Contact Info
+            </div>
+        </div>      
+    </footer>
+    -->
+
+    <footer class="footer">
+        <div class="footer-left col-md-4 col-sm-6">
+            <p class="about">
+                <span> About PASALE DAI</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt, ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
+            </p>
+            <div class="icons wow bounceInRight">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-center col-md-4 col-sm-6">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span> Street name and number</span> City, Country</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p> (+00) 0000 000 000</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>office@company.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right col-md-4 col-sm-6">
+            <img src="img/full_logo.jpg">
+            <p class="menu">
+                <a href="index.html"> Home</a> |
+                <a href="index.html#all_services"> Services</a> |
+                <a href="#"> Blog</a> |
+                <a href="#"> Career</a>
+            </p>
+            <p class="name"> PASALE DAI &copy; 2017</p>
+        </div>
+    </footer>
 </body>
+
 </html>
