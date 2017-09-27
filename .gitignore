@@ -14,7 +14,6 @@ Desktop.ini
 
 
 # npm
-node_modules
 *.log
 *.gz
 
@@ -25,5 +24,6 @@ coverage
 # Benchmarking
 benchmarks/graphs
 
+# IntelliJ
 .idea/
 bin/
