@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pasale Dai-Your Friend In Need</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Link Stylesheets-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+
+	<!-- Link JavaScript Files-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Script for RFQ-->
+  	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+	<script src="js/wow.min.js"></script>
+	<script>new WOW().init();</script>
+</head>
+
+<style type="text/css">
+	.jumbotron {
+   		background: rgba(0, 0, 0,0.5); 
+   	}
+   	body{
+   		margin-top: 70px;
+   		background-color: #c5c9c7;
+   	}
+</style>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>	
+				<a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>	
+			</div>
+
+
+
+			<div class="collapse navbar-collapse" id="myNavBar">
+				<ul class="nav navbar-nav navbar-right">
+					<li style="padding-right: 45px;"><a href="partner.html">Join as Professional</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
+				</ul>
+
+			</div>
+
+		</div>	
+			
+	</nav>
+
+
+
+	<!--PopUp For LogIn-->
+	<div id="login" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title"><b><center>Log In</center></b></div>
+				</div>
+				<div class="modal-body">
+					<div class="container login-form">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="username" placeholder="Username or PhoneNumber">
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+									<div class="checkbox login-options">
+										<!--
+										<label><input type="checkbox"/> Remember Me</label>
+										<a href="#" class="login-forgot">Forgot Username/Password?</a>
+										-->
+									</div>		
+								</form>			
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PopUp for login End-->
+
+
+	<!--PopUp For Register-->
+	<div id="register" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title"><b><center>Sign Up</center></b></div>
+				</div>
+				<div class="modal-body">
+					<div class="container login-form">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="name" placeholder="Name">
+									</div>
+
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="mobile" placeholder="Mobile No.">
+									</div>
+									<div class="input-group login-userinput">
+									    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="email" placeholder="Email Address">
+									</div>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Re-type Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Sign Up</button>
+									<div class="checkbox login-options">
+										<label><input type="checkbox"/> Remember Me</label>
+										<a href="#" class="login-forgot">Forgot Username/Password?</a>
+									</div>		
+								</form>			
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PopUp for Register End-->
+
+
+	<!--Filter-->
+	<div class="container row">
+		<div class="col-md-10">
+			<div>
+				<img src="img/servicess.jpg">
+			</div>
+			<br>
+			<div class="well" style="background-color: #9fa3a1;">
+				<form role="form">
+					<div class="form-group row">
+						<div class="col-md-6">
+							<input type="text" name="name" placeholder="Filter by Name" class="form-control">
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="city" placeholder="Filter by City" class="form-control">
+						</div>
+					</div>	
+				</form>
+			</div>
+
+			<div class="well" style="background-color: #9fa3a1;">
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/kalimati.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Kalimati Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Kalimati, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9843589745</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> service@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.packer.com.np</span>
+							
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/newroad.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>New Road Home Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Potters, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> New Road, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9841289885</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> thebigroad@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.bigroad.com.np</span>
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (9)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (3)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (16)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/lazim.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Home Sweet Service</u></p>
+							<p style="font-size: 15px;">Services : Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Lazimpat, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9861234652</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> hsshome@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.hsshome.com.np</span>
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/kalimati.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Kalimati Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Kalimati, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9843589745</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> service@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.packer.com.np</span>
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/newroad.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>New Road Home Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Potters, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> New Road, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9841289885</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> thebigroad@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.bigroad.com.np</span>
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (9)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (3)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (16)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/lazim.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Home Sweet Service</u></p>
+							<p style="font-size: 15px;">Services : Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Lazimpat, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9861234652</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> hsshome@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.hsshome.com.np</span>
+						</div>
+						<button class="btnrfq success" data-toggle="modal" data-target="#rfq_popup" style="margin-right: 35px; margin-top: 30px;">Request for Quotaion</button>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="rfq_popup" class="modal fade" role="dialog">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" onclick="window.location.reload()" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="container login-form">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form method="post">
+    <div id="msform">
+      <!-- progressbar -->
+      
+      	<ul id="progressbar">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <!-- fieldsets -->
+       <fieldset>
+        <h4>1. Answer a few questions and tell us your needs.</h4>
+        <h4>2. Professionals will send their profiles and prices based on ypur needs</h4>
+        <h4>3. Browse profiles and call professionals you like.</h4>
+        <input type="button" name="next" class="next action-button" value="Get Started" />
+      </fieldset>
+      <fieldset>
+        <h4 class="fs-subtitle">Bridal make-up artists</h4>
+        <h4 class="fs-subtitle">We will contact other professionals who match your needs</h4>
+        <select>
+  		<option selected="selected" class="question">Are you the bride?</option>
+  		<option>Yes</option>
+  		<option>No</option>
+  		<option>No, I am the groom</option>
+        </select>
+        <select>
+  		<option selected="selected" class="question">Is your wedding/event date finalised?</option>
+  		<option>Yes</option>
+  		<option>No</option>
+        </select>
+   		<input type="text" placeholder="Where do you want the service?">
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+
+      <fieldset> 
+        <h3 class="fs-subtitle">Bridal make-up artists</h3>
+        <h3 class="fs-subtitle">We will contact other professionals who match your needs</h3>
+        <input type="text" placeholder="Enter your wedding/event date">
+        <select>
+  		<option selected="selected" class="question">Have you booked the venue for wedding/event?</option>
+  		<option>Yes, its booked</option>
+  		<option>No, not yet</option>
+        </select>
+   		<select>
+  		<option selected="selected" class="question">What is your estimated budget for makeup?</option>
+  		<option>Regular Bridal MakeUp (Rs 7000 to 10000)</option>
+  		<option>Standard Bridal MakeUp (Rs 12000 to 15000)</option>
+        </select>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+      <fieldset>
+        
+        <h3 class="fs-subtitle">Bridal make-up artists</h3>
+        <h3 class="fs-subtitle">We will contact other professionals who match your needs</h3>
+        <select>
+  		<option selected="selected" class="question">Do additional people want makeUp?</option>
+  		<option>No, I need it only for myself</option>
+  		<option>Yes</option>
+        </select>
+        <select>
+  		<option selected="selected" class="question">How soon would you like to hire?</option>
+  		<option>Not sure</option>
+  		<option>Within a month</option>
+  		<option>Immediately</option>
+        </select>
+        <input type="text" placeholder="Enter the location you want to hire the bridal makeup artist?">
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+      </fieldset>
+    </div>
+  </form>
+
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<!--
+				<div class="modal-footer">
+					<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+
+
+	<!--Footer-->
+	<div class="footer">
+  		<div class="footer-left col-md-4 col-sm-6">
+	    	<p class="about">
+	      		<span> About PASALE DAI</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
+	      		ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
+	    	</p>
+	    	<div class="icons wow bounceInRight" >
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+	    	</div>
+  		</div>
+  		<div class="footer-center col-md-4 col-sm-6">
+    		<div>
+      			<i class="fa fa-map-marker"></i>
+      			<p><span> Street name and number</span> City, Country</p>
+    		</div>
+	    	<div>
+				<i class="fa fa-phone"></i>
+	      		<p> (+00) 0000 000 000</p>
+	    	</div>
+	    	<div>
+				<i class="fa fa-envelope"></i>
+				<p>office@company.com</p>
+	    	</div>
+  		</div>
+  
+		<div class="footer-right col-md-4 col-sm-6">
+			<img src="img/full_logo.jpg">
+			<p class="menu">
+				<a href="index.html"> Home</a> |
+				<a href="index.html#all_services"> Services</a> |
+				<a href="#"> Blog</a> |
+				<a href="#"> Career</a> 
+			</p>
+			<p class="name"> PASALE DAI &copy; 2017</p>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+	//jQuery time
+(function($) {
+  var current_fs, next_fs, previous_fs; //fieldsets
+  var left, opacity, scale; //fieldset properties which we will animate
+  var animating; //flag to prevent quick multi-click glitches
+
+  $(".next").click(function() {
+    if (animating) return false;
+    animating = true;
+
+    current_fs = $(this).parent();
+    next_fs = $(this).parent().next();
+
+    //activate next step on progressbar using the index of next_fs
+    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+    //show the next fieldset
+    next_fs.show();
+    //hide the current fieldset with style
+    current_fs.animate({
+      opacity: 0
+    }, {
+      step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale current_fs down to 80%
+        scale = 1 - (1 - now) * 0.2;
+        //2. bring next_fs from the right(50%)
+        left = (now * 50) + "%";
+        //3. increase opacity of next_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({
+          'transform': 'scale(' + scale + ')'
+        });
+        next_fs.css({
+          'left': left,
+          'opacity': opacity
+        });
+      },
+      duration: 800,
+      complete: function() {
+        current_fs.hide();
+        animating = false;
+      },
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+    });
+  });
+
+  $(".previous").click(function() {
+    if (animating) return false;
+    animating = true;
+
+    current_fs = $(this).parent();
+    previous_fs = $(this).parent().prev();
+
+    //de-activate current step on progressbar
+    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+    //show the previous fieldset
+    previous_fs.show();
+    //hide the current fieldset with style
+    current_fs.animate({
+      opacity: 0
+    }, {
+      step: function(now, mx) {
+        //as the opacity of current_fs reduces to 0 - stored in "now"
+        //1. scale previous_fs from 80% to 100%
+        scale = 0.8 + (1 - now) * 0.2;
+        //2. take current_fs to the right(50%) - from 0%
+        left = ((1 - now) * 50) + "%";
+        //3. increase opacity of previous_fs to 1 as it moves in
+        opacity = 1 - now;
+        current_fs.css({
+          'left': left
+        });
+        previous_fs.css({
+          'transform': 'scale(' + scale + ')',
+          'opacity': opacity
+        });
+      },
+      duration: 800,
+      complete: function() {
+        current_fs.hide();
+        animating = false;
+      },
+      //this comes from the custom easing plugin
+      easing: 'easeInOutBack'
+    });
+  });
+
+
+$(".btnrfq").click(function(){
+	$("#carpenter_popup").hide();
+})
+ 
+
+})(jQuery);
+</script>
+	
+</body>
+</html>
