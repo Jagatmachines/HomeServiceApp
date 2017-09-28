@@ -11,7 +11,11 @@
 1. Node.js
 	* Windows: [Node.js](https://nodejs.org/en/)
 	* Linux:
-	```sudo apt-get install node
-	sudo apt-get install npm```
+		```
+		sudo apt-get install node
+		sudo apt-get install npm
+		```
 	* Mac:
-	```brew install node```
+		```
+		brew install node
+		```
