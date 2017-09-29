@@ -15,5 +15,9 @@
 		```
 
 ## Project Setup
-1. Open terminal at file location and type `node app`
+1. Open terminal at file location and type the following commands
+	```
+	npm install
+	node app
+	```
 2. Open browser and type `localhost:3000`
