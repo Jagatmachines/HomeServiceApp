@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var session = require('express-session');
 
 var index = require('./routes/index');
 var partner = require('./routes/partner');
@@ -23,7 +24,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({secret:"3UKHwaI6de", resave: false, saveUninitialized: true}));
+app.use(session({
+    secret: "3UKHwaI6de",
+    resave: false,
+    saveUninitialized: true
+}));
 
 app.use('/', index);
 app.use('/partner', partner);

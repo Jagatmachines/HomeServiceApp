@@ -28,7 +28,7 @@ router.post('/login', function(req, res) {
 
 router.get('/dashboard', function(req, res) {
     if(!req.session.user) {
-        return res.send(404).send();
+        return res.send(401).send();
     }
 
     return res.status(200).send("You've been logged in");
