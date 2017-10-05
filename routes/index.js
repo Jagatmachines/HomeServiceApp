@@ -34,6 +34,11 @@ router.get('/dashboard', function(req, res) {
     return res.status(200).send("You've been logged in");
 });
 
+router.get('/logout', function(req, res) {
+    req.session.destroy();
+    res.send(200).send();
+});
+
 router.post('/register', function(req, res) {
     var newUser = new user();
 
