@@ -11,24 +11,31 @@ router.post('/login', function(req, res) {
     var email = req.body.email;
     var password = req.body.password;
 
-    user.findOne({email: email, password: password}, function(err, user) {
-        if(err) {
+    user.findOne({ email: email }, function(err, user) {
+        if (err) {
             console.log(err);
-            return res.status(500).send();
+            return res.sendStatus(500);
         }
 
-        if(!user) {
-            return res.status(404).send();
+        if (!user) {
+            return res.sendStatus(404);
         }
 
-        req.session.user = user;
-        return res.status(200).send();
+        // test for matching password
+        user.comparePassword(password, function(err, isMatch) {
+            if (isMatch && isMatch == true) {
+                req.session.user = user;
+                return res.sendStatus(200);
+            } else {
+                return res.sendStatus(401);
+            }
+        });
     });
 });
 
 router.get('/dashboard', function(req, res) {
-    if(!req.session.user) {
-        return res.send(401).send();
+    if (!req.session.user) {
+        return res.sendStatus(401);
     }
 
     return res.status(200).send("You've been logged in");
@@ -36,7 +43,7 @@ router.get('/dashboard', function(req, res) {
 
 router.get('/logout', function(req, res) {
     req.session.destroy();
-    res.send(200).send();
+    res.sendStatus(200);
 });
 
 router.post('/register', function(req, res) {
@@ -48,12 +55,12 @@ router.post('/register', function(req, res) {
     newUser.phone = req.body.phone;
     newUser.password = req.body.password;
 
-    newUser.save(function(err, savedUser) {
+    newUser.save(function(err) {
         if (err) {
             console.log(err);
-            return res.status(500).send();
+            return res.sendStatus(500);
         }
-        return res.status(200).send();
+        return res.sendStatus(200);
     });
 });
 

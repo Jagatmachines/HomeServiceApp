@@ -34,9 +34,16 @@ app.use('/', index);
 app.use('/partner', partner);
 app.use('/professionals', professionals);
 
+// mongoose connection
 mongoose.Promise = require('bluebird');
 var promise = mongoose.connect('mongodb://localhost/pasale_dai', {
     useMongoClient: true,
+});
+promise.then(function(db, err) {
+    if (err) {
+        console.log(err);
+    }
+    console.log('Successfully connected to MongoDB');
 });
 
 // catch 404 and forward to error handler
