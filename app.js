@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({secret:"3UKHwaI6de", resave: false, saveUninitialized: true}));
+
 app.use('/', index);
 app.use('/partner', partner);
 app.use('/professionals', professionals);
