@@ -27,5 +27,6 @@ coverage
 benchmarks/graphs
 
 # IntelliJ
+*.iml
 .idea/
 bin/
