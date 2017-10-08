@@ -9,15 +9,26 @@
 		sudo apt-get install node
 		sudo apt-get install npm
 		```
-	* Mac:
+	* Mac OS X:
 		```
 		brew install node
 		```
 
+2. Nodemon
+	```
+	npm install nodemon
+	```
+
+3. MongoDB
+	* [Windows](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+	* [Linux](https://docs.mongodb.com/manual/administration/install-on-linux/)
+	* [Mac OS X](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+
 ## Project Setup
-1. Open terminal at file location and type the following commands
+1. Open a terminal and run the mongo server by typing `mongod`
+2. Open another terminal at file location and type the following commands
 	```
 	npm install
-	node app
+	nodemon
 	```
-2. Open browser and type `localhost:3000`
+3. Open browser and type `localhost:3000`
