@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Website Tutorial</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Link Stylesheets-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+
+	<!-- Link JavaScript Files-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script src="js/wow.min.js"></script>
+	<script>new WOW().init();</script>
+</head>
+
+<style type="text/css">
+	.jumbotron {
+   		background: rgba(0, 0, 0,0.5); 
+   	}
+   	body{
+   		margin-top: 70px;
+   		background-color: #c5c9c7;
+   	}
+</style>
+
+<body>
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>	
+				<a class="navbar-brand" href="index.html" style="margin-left: 70px;"><img src="img/logo.png"></a>	
+			</div>
+			<div class="collapse navbar-collapse" id="myNavBar">
+				<ul class="nav navbar-nav navbar-right"  style="padding-right: 45px;">
+					<li><a href="partner.html" >Join as Professional</a></li>;
+					<li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#register">Register</a></li>
+				</ul>
+			</div>
+		</div>				
+	</nav>
+
+
+
+	<!--PopUp For LogIn-->
+	<div id="login" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title"><b><center>Log In</center></b></div>
+				</div>
+				<div class="modal-body">
+					<div class="container login-form">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="username" placeholder="Username or PhoneNumber">
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+									<div class="checkbox login-options">
+										<!--
+										<label><input type="checkbox"/> Remember Me</label>
+										<a href="#" class="login-forgot">Forgot Username/Password?</a>
+										-->
+									</div>		
+								</form>			
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PopUp for login End-->
+
+
+	<!--PopUp For Register-->
+	<div id="register" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<div class="modal-title"><b><center>Sign Up</center></b></div>
+				</div>
+				<div class="modal-body">
+					<div class="container login-form">
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<form>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="name" placeholder="Name">
+									</div>
+
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="mobile" placeholder="Mobile No.">
+									</div>
+									<div class="input-group login-userinput">
+									    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+										<input id="txtUser" type="text" class="form-control" name="email" placeholder="Email Address">
+									</div>
+									<div class="input-group login-userinput">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<div class="input-group">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+										<input  id="txtPassword" type="password" class="form-control" name="password" placeholder="Re-type Password">
+										<span id="showPassword" class="input-group-btn">
+					            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+					          </span>  
+									</div>
+									<button class="btn btn-primary btn-block login-button" type="submit"><i class="fa fa-sign-in"></i> Sign Up</button>
+									<div class="checkbox login-options">
+										<label><input type="checkbox"/> Remember Me</label>
+										<a href="#" class="login-forgot">Forgot Username/Password?</a>
+									</div>		
+								</form>			
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PopUp for Register End-->
+
+
+	<!--Filter-->
+	<div class="container row">
+		<div class="col-md-10">
+			<div>
+				<img src="img/servicess.jpg">
+			</div>
+			<br>
+			<div class="well" style="background-color: #9fa3a1;">
+				<form role="form">
+					<div class="form-group row">
+						<div class="col-md-6">
+							<input type="text" name="name" placeholder="Filter by Name" class="form-control">
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="city" placeholder="Filter by City" class="form-control">
+						</div>
+					</div>	
+				</form>
+			</div>
+
+			<div class="well" style="background-color: #9fa3a1;">
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/kalimati.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Kalimati Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Kalimati, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9843589745</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> service@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.packer.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/newroad.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>New Road Home Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Potters, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> New Road, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9841289885</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> thebigroad@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.bigroad.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (9)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (3)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (16)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/lazim.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Home Sweet Service</u></p>
+							<p style="font-size: 15px;">Services : Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Lazimpat, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9861234652</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> hsshome@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.hsshome.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/kalimati.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Kalimati Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Kalimati, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9843589745</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> service@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.packer.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/newroad.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>New Road Home Services</u></p>
+							<p style="font-size: 15px;">Services : Packing, Potters, Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> New Road, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9841289885</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> thebigroad@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.bigroad.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (9)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (3)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (16)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="well well-lg">
+					<div class="row">
+						<div class="col-sm-3"><img src="img/lazim.jpg" style="width: 150px; height: 120px;"></div>
+						<div class="col-sm-6">
+							<p style="font-size: 25px; font-weight: 500;"><u>Home Sweet Service</u></p>
+							<p style="font-size: 15px;">Services : Shifting</p>
+							<span class="glyphicon glyphicon-map-marker"> Lazimpat, Kathmandu</span>
+						</div>
+						<div class="col-sm-3">
+							<span class="glyphicon glyphicon-earphone"> 9861234652</span><br><br>
+							<span class="glyphicon glyphicon-envelope"> hsshome@gmail.com</span><br><br>
+							<span class="glyphicon glyphicon-globe"> www.hsshome.com.np</span>
+						</div>
+					</div>
+					<hr style="height:1px; background-color: black;">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-up">  Likes (4)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-thumbs-down">  Dislikes (1)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-eye-open">  Views (8)  </span>
+						</div>
+						<div class="col-md-3">
+							<span class="glyphicon glyphicon-send">  Message  </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Footer-->
+	<div class="footer">
+  		<div class="footer-left col-md-4 col-sm-6">
+	    	<p class="about">
+	      		<span> About PASALE DAI</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
+	      		ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
+	    	</p>
+	    	<div class="icons wow bounceInRight" >
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+	    	</div>
+  		</div>
+  		<div class="footer-center col-md-4 col-sm-6">
+    		<div>
+      			<i class="fa fa-map-marker"></i>
+      			<p><span> Street name and number</span> City, Country</p>
+    		</div>
+	    	<div>
+				<i class="fa fa-phone"></i>
+	      		<p> (+00) 0000 000 000</p>
+	    	</div>
+	    	<div>
+				<i class="fa fa-envelope"></i>
+				<p>office@company.com</p>
+	    	</div>
+  		</div>
+  
+		<div class="footer-right col-md-4 col-sm-6">
+			<img src="img/full_logo.jpg">
+			<p class="menu">
+				<a href="index.html"> Home</a> |
+				<a href="index.html#all_services"> Services</a> |
+				<a href="#"> Blog</a> |
+				<a href="#"> Career</a> 
+			</p>
+			<p class="name"> PASALE DAI &copy; 2017</p>
+		</div>
+	</div>
+	
+</body>
+</html>
